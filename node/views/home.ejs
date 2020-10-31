@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <%- include('partials/nav') %>
+        <h3>Home Page</h3>
+        <form id="myForm">
+            <input type="text" name="item">
+            <button type="submit">add</button>
+        </form>
+       <br/>
+        <ul id="navigation">
+            
+                    <% wish.forEach(item=>{ %>
+                        <li onclick="deleteme(this)"><%= item %></li>
+                   <% }) %>
+      
+        </ul>
+        <script src="/script.js"></script>
+    </body>
+</html>
